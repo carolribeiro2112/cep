@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import {Local} from '../types/Local'
+import {Local} from './types/Local'
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <input type="text" onChange={(event) => setCep(event.target.value)} />
-      <button onClick={getCep}>Ver tempo</button>
+      <button onClick={getCep}>Ver Endereço</button>
       <h1>Local</h1>
       <>
         <p>{local?.uf}</p>
