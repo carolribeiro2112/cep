@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import './styles.css'
 import {Local} from './types/Local'
 
 function App() {
@@ -14,14 +15,14 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>Localizador através do CEP</h1><br/>
       <input type="text" onChange={(event) => setCep(event.target.value)} />
       <button onClick={getCep}>Ver Endereço</button>
-      <h1>Local</h1>
       <>
-        <p>{local?.uf}</p>
-        <p>{local?.localidade}</p>
-        <p>{local?.bairro}</p>
-        <p>{local?.logradouro}</p>
+        <p>uf: {local?.uf}</p>
+        <p>cidade: {local?.localidade}</p>
+        <p>bairro: {local?.bairro}</p>
+        <p>logradouro: {local?.logradouro}</p>
       </>
     </div>
   );
